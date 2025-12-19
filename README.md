@@ -134,7 +134,7 @@ docker run -it my-ee:latest bash
 From within the container, you can execute `raidcom` commands:
 
 ```bash
-raidcom -I -host <controller_ip> discover raid
+raidcom get resource -IH100
 ```
 
 ## Configuration
