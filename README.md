@@ -26,6 +26,11 @@ Before building this Execution Environment, ensure you have:
 
 3. **HORCM.tgz** archive:
    - Obtain the HORCM binaries from Hitachi
+   - Run the commands below to create HORCM.tgz
+   - cat RMHORC | cpio -ivdum
+   - chmod -R 777 ./HORCM
+   - chown -R root:sys ./HORCM
+   - tar -cvzpf HORCM.tgz ./HORCM
    - Place the `HORCM.tgz` file in the repository root directory
    - This file is referenced in `execution_environment.yml` and will be included in the container during build
 
