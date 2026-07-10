@@ -1,5 +1,2 @@
----
-
 collections:
-
-  - name: hitachivantara.vspone_block
+  - name: /build/configs/hitachivantara-vspone_block-4.8.2.tar.gz

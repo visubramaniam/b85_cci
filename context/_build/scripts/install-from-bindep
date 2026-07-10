@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # Copyright (c) 2019 Red Hat, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,8 +24,6 @@ PKGMGR_PRESERVE_CACHE="${PKGMGR_PRESERVE_CACHE:-}"
 PYCMD="${PYCMD:=/usr/bin/python3}"
 PIPCMD="${PIPCMD:=$PYCMD -m pip}"
 PIP_OPTS="${PIP_OPTS-}"
-
-$PYCMD -m ensurepip
 
 if [ -z $PKGMGR ]; then
     # Expect dnf to be installed, however if we find microdnf default to it.
