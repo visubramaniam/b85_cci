@@ -1,2 +1,8 @@
+HORCM_MON
+localhost   54000   1000    3000
 HORCM_CMD
 \\.\IPCMD-{{ storage_controller_ip }}-31001
+HORCM_LDEV
+{{ HORCM_GROUP_NAME }}   dev01  {{ storage_serial }}    {{ pvol_ldev_id }}   0
+HORCM_INSTP
+{{ HORCM_GROUP_NAME }}   localhost   54001 {{ az_path_grp_id }}
