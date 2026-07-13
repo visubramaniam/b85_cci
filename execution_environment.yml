@@ -13,6 +13,8 @@ additional_build_files:
     dest: configs
   - src: horcm100.conf.j2
     dest: configs
+  - src: horcm101.conf.j2
+    dest: configs
   - src: hsds_cli-1.19.0.40.1008-py3-none-any.whl
     dest: configs
   - src: hitachivantara-vspone_block-4.8.2.tar.gz
