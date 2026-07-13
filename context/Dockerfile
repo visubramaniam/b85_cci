@@ -27,6 +27,7 @@ COPY _build/configs/HORCM.tgz /tmp
 RUN  tar xvzf /tmp/HORCM.tgz -C /
 RUN /HORCM/horcminstall.sh
 COPY _build/configs/horcm100.conf.j2 /tmp
+COPY _build/configs/horcm101.conf.j2 /tmp
 COPY _build/configs/hsds_cli-1.19.0.40.1008-py3-none-any.whl /tmp
 RUN pip3 install /tmp/hsds_cli-1.19.0.40.1008-py3-none-any.whl
 RUN /output/scripts/pip_install $PYCMD
@@ -92,6 +93,7 @@ RUN chmod ug+rw /etc/passwd
 RUN mkdir -p /runner && chgrp 0 /runner && chmod -R ug+rwx /runner
 WORKDIR /runner
 RUN $PYCMD -m pip install --no-cache-dir 'dumb-init==1.2.5'
+RUN chgrp 0 /etc && chmod g+w /etc
 RUN rm -rf /output
 LABEL ansible-execution-environment=true
 USER 1000
